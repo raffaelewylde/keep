@@ -273,7 +273,7 @@ def edit_commands(commands, editor=None, edit_header=""):
     new_commands = {}
     if edited:
         for line in edited.split('\n'):
-            if (line.startswith('#') or line == ""):
+            if line.startswith('#') or line == "":
                 continue
             re_match = command_regex.search(line)
             if re_match and len(re_match.groups()) == 3:
